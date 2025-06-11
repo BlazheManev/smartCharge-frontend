@@ -15,6 +15,7 @@ const customIcon = new L.Icon({
 export default function MapView() {
   const [stations, setStations] = useState<Station[]>([]);
   const mapRef = useRef<LeafletMap | null>(null);
+  const markerRefs = useRef<Record<string, L.Marker>>({});
   const [sidebarOpen, setSidebarOpen] = useState<boolean>(false);
 
   const ljubljana: LatLngTuple = [46.05, 14.5];
@@ -25,9 +26,14 @@ export default function MapView() {
       .catch(console.error);
   }, []);
 
-  const flyToStation = (lat: number, lon: number) => {
+  const flyToStation = (station: Station) => {
     if (mapRef.current) {
+      const { lat, lon } = station.position;
       mapRef.current.flyTo([lat, lon], 17, { duration: 1.2 });
+
+      // ⬇️ Odpri popup
+      const marker = markerRefs.current[station.id];
+      if (marker) marker.openPopup();
     }
   };
 
@@ -49,6 +55,9 @@ export default function MapView() {
             key={station.id}
             position={[station.position.lat, station.position.lon]}
             icon={customIcon}
+            ref={(ref) => {
+              if (ref) markerRefs.current[station.id] = ref;
+            }}
           >
             <Popup>
               <strong>{station.name}</strong><br />
@@ -71,13 +80,13 @@ export default function MapView() {
         ))}
       </MapContainer>
 
-      {/* 🍔 Hamburger Menu */}
+      {/* 🍔 Hamburger Menu (RIGHT side) */}
       <button
         onClick={() => setSidebarOpen(!sidebarOpen)}
         style={{
           position: "absolute",
           top: "1rem",
-          left: "1rem",
+          right: "1rem",
           zIndex: 1001,
           backgroundColor: "#fff",
           border: "1px solid #ccc",
@@ -94,7 +103,7 @@ export default function MapView() {
         <div
           style={{
             position: "absolute",
-            top: "1rem",
+            top: "4rem",
             right: "1rem",
             backgroundColor: "white",
             padding: "1rem",
@@ -113,8 +122,8 @@ export default function MapView() {
               <div
                 key={station.id}
                 onClick={() => {
-                  flyToStation(station.position.lat, station.position.lon);
-                  setSidebarOpen(false); // auto close
+                  flyToStation(station);
+                  setSidebarOpen(false);
                 }}
                 style={{
                   cursor: "pointer",

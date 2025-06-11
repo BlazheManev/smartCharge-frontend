@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import type { ModelMeta } from "../types/Model";
 import type { Station } from "../types/Station";
-import rawModelsData from "../data/ml_models.json";
+import rawModelsData from "../../public/ml_models.json";
 import stationRawData from "../../src/api/ljubljana_ev_availability_combined.json";
 
 type GroupedModels = {

@@ -1,0 +1,1466 @@
+{
+  "results": [
+    {
+      "id": "lV9G0SlmFoStjlnbrRl_cQ",
+      "name": "Gremo Na Elektriko",
+      "address": "Rimska cesta 7, 1000 Ljubljana",
+      "position": {
+        "lat": 46.047258,
+        "lon": 14.501455
+      },
+      "availability": [
+        {
+          "type": "IEC62196Type2Outlet",
+          "total": 2,
+          "availability": {
+            "current": {
+              "available": 1,
+              "occupied": 1,
+              "reserved": 0,
+              "unknown": 0,
+              "outOfService": 0
+            },
+            "perPowerLevel": [
+              {
+                "powerKW": 22.0,
+                "available": 1,
+                "occupied": 1,
+                "reserved": 0,
+                "unknown": 0,
+                "outOfService": 0
+              }
+            ]
+          }
+        }
+      ],
+      "fetched_at": "2025-06-11T11:21:00.256164"
+    },
+    {
+      "id": "HAbxPKf2aI2JOPHINhoIGA",
+      "name": "Gremo Na Elektriko",
+      "address": "Kongresni trg 1, 1000 Ljubljana",
+      "position": {
+        "lat": 46.049993,
+        "lon": 14.504255
+      },
+      "availability": [
+        {
+          "type": "IEC62196Type2Outlet",
+          "total": 5,
+          "availability": {
+            "current": {
+              "available": 5,
+              "occupied": 0,
+              "reserved": 0,
+              "unknown": 0,
+              "outOfService": 0
+            },
+            "perPowerLevel": [
+              {
+                "powerKW": 22.0,
+                "available": 5,
+                "occupied": 0,
+                "reserved": 0,
+                "unknown": 0,
+                "outOfService": 0
+              }
+            ]
+          }
+        }
+      ],
+      "fetched_at": "2025-06-11T11:21:00.638519"
+    },
+    {
+      "id": "2-ojfgDAnqoM2dpS4lA9UA",
+      "name": "Gremo Na Elektriko",
+      "address": "Kongresni trg 1, 1000 Ljubljana",
+      "position": {
+        "lat": 46.050554,
+        "lon": 14.503955
+      },
+      "availability": [
+        {
+          "type": "IEC62196Type2CCS",
+          "total": 2,
+          "availability": {
+            "current": {
+              "available": 2,
+              "occupied": 0,
+              "reserved": 0,
+              "unknown": 0,
+              "outOfService": 0
+            },
+            "perPowerLevel": [
+              {
+                "powerKW": 22.0,
+                "available": 2,
+                "occupied": 0,
+                "reserved": 0,
+                "unknown": 0,
+                "outOfService": 0
+              }
+            ]
+          }
+        },
+        {
+          "type": "IEC62196Type2Outlet",
+          "total": 9,
+          "availability": {
+            "current": {
+              "available": 3,
+              "occupied": 6,
+              "reserved": 0,
+              "unknown": 0,
+              "outOfService": 0
+            },
+            "perPowerLevel": [
+              {
+                "powerKW": 11.0,
+                "available": 2,
+                "occupied": 1,
+                "reserved": 0,
+                "unknown": 0,
+                "outOfService": 0
+              },
+              {
+                "powerKW": 22.0,
+                "available": 1,
+                "occupied": 5,
+                "reserved": 0,
+                "unknown": 0,
+                "outOfService": 0
+              }
+            ]
+          }
+        }
+      ],
+      "fetched_at": "2025-06-11T11:21:00.944551"
+    },
+    {
+      "id": "hkFsonBNn2vMY6VKPKktOg",
+      "name": "Gremo Na Elektriko",
+      "address": "Gregor\u010di\u010deva ulica 17, 1000 Ljubljana",
+      "position": {
+        "lat": 46.048562,
+        "lon": 14.49925
+      },
+      "availability": [
+        {
+          "type": "IEC62196Type2Outlet",
+          "total": 2,
+          "availability": {
+            "current": {
+              "available": 1,
+              "occupied": 1,
+              "reserved": 0,
+              "unknown": 0,
+              "outOfService": 0
+            },
+            "perPowerLevel": [
+              {
+                "powerKW": 22.0,
+                "available": 1,
+                "occupied": 1,
+                "reserved": 0,
+                "unknown": 0,
+                "outOfService": 0
+              }
+            ]
+          }
+        }
+      ],
+      "fetched_at": "2025-06-11T11:21:01.255723"
+    },
+    {
+      "id": "Sn9o2Rx2iuq8cmf3rGIBZg",
+      "name": "Petrol",
+      "address": "Igri\u0161ka ulica 5, 1000 Ljubljana",
+      "position": {
+        "lat": 46.04805,
+        "lon": 14.49925
+      },
+      "availability": [
+        {
+          "type": "IEC62196Type2Outlet",
+          "total": 4,
+          "availability": {
+            "current": {
+              "available": 2,
+              "occupied": 2,
+              "reserved": 0,
+              "unknown": 0,
+              "outOfService": 0
+            },
+            "perPowerLevel": [
+              {
+                "powerKW": 22.0,
+                "available": 2,
+                "occupied": 2,
+                "reserved": 0,
+                "unknown": 0,
+                "outOfService": 0
+              }
+            ]
+          }
+        }
+      ],
+      "fetched_at": "2025-06-11T11:21:01.568287"
+    },
+    {
+      "id": "sO1lIBoUs3IZnqBDhTIxOw",
+      "name": "Mega M d.o.o.",
+      "address": "\u0160ubi\u010deva ulica 3A, 1000 Ljubljana",
+      "position": {
+        "lat": 46.051398,
+        "lon": 14.499944
+      },
+      "availability": [
+        {
+          "type": "IEC62196Type2Outlet",
+          "total": 17,
+          "availability": {
+            "current": {
+              "available": 13,
+              "occupied": 4,
+              "reserved": 0,
+              "unknown": 0,
+              "outOfService": 0
+            },
+            "perPowerLevel": [
+              {
+                "powerKW": 11.0,
+                "available": 0,
+                "occupied": 1,
+                "reserved": 0,
+                "unknown": 0,
+                "outOfService": 0
+              },
+              {
+                "powerKW": 22.0,
+                "available": 13,
+                "occupied": 3,
+                "reserved": 0,
+                "unknown": 0,
+                "outOfService": 0
+              }
+            ]
+          }
+        }
+      ],
+      "fetched_at": "2025-06-11T11:21:01.874768"
+    },
+    {
+      "id": "-3fchx9uvuODLLBZZcznxQ",
+      "name": "Petrol",
+      "address": "Sne\u017eni\u0161ka ulica 1, 1000 Ljubljana",
+      "position": {
+        "lat": 46.04712,
+        "lon": 14.49744
+      },
+      "availability": [
+        {
+          "type": "IEC62196Type2Outlet",
+          "total": 4,
+          "availability": {
+            "current": {
+              "available": 3,
+              "occupied": 1,
+              "reserved": 0,
+              "unknown": 0,
+              "outOfService": 0
+            },
+            "perPowerLevel": [
+              {
+                "powerKW": 22.0,
+                "available": 3,
+                "occupied": 1,
+                "reserved": 0,
+                "unknown": 0,
+                "outOfService": 0
+              }
+            ]
+          }
+        }
+      ],
+      "fetched_at": "2025-06-11T11:21:02.176315"
+    },
+    {
+      "id": "94rI__OMlL8tZSi5nXIyww",
+      "name": "Petrol",
+      "address": "Tom\u0161i\u010deva ulica 5, 1000 Ljubljana",
+      "position": {
+        "lat": 46.05232,
+        "lon": 14.500591
+      },
+      "availability": [
+        {
+          "type": "IEC62196Type2Outlet",
+          "total": 4,
+          "availability": {
+            "current": {
+              "available": 2,
+              "occupied": 2,
+              "reserved": 0,
+              "unknown": 0,
+              "outOfService": 0
+            },
+            "perPowerLevel": [
+              {
+                "powerKW": 22.0,
+                "available": 2,
+                "occupied": 2,
+                "reserved": 0,
+                "unknown": 0,
+                "outOfService": 0
+              }
+            ]
+          }
+        }
+      ],
+      "fetched_at": "2025-06-11T11:21:02.558008"
+    },
+    {
+      "id": "i1O2SylrfRAvP1O-uT3h9A",
+      "name": "Gremo Na Elektriko",
+      "address": "Pre\u0161ernova cesta 2, 1000 Ljubljana",
+      "position": {
+        "lat": 46.048234,
+        "lon": 14.496792
+      },
+      "availability": [
+        {
+          "type": "IEC62196Type2Outlet",
+          "total": 4,
+          "availability": {
+            "current": {
+              "available": 3,
+              "occupied": 1,
+              "reserved": 0,
+              "unknown": 0,
+              "outOfService": 0
+            },
+            "perPowerLevel": [
+              {
+                "powerKW": 22.0,
+                "available": 3,
+                "occupied": 1,
+                "reserved": 0,
+                "unknown": 0,
+                "outOfService": 0
+              }
+            ]
+          }
+        }
+      ],
+      "fetched_at": "2025-06-11T11:21:02.874289"
+    },
+    {
+      "id": "-zPs1yNuWplLLdJeoQJPJg",
+      "name": "Petrol",
+      "address": "Vrta\u010da 1, 1000 Ljubljana",
+      "position": {
+        "lat": 46.04847,
+        "lon": 14.496671
+      },
+      "availability": [
+        {
+          "type": "IEC62196Type2Outlet",
+          "total": 2,
+          "availability": {
+            "current": {
+              "available": 1,
+              "occupied": 1,
+              "reserved": 0,
+              "unknown": 0,
+              "outOfService": 0
+            },
+            "perPowerLevel": [
+              {
+                "powerKW": 22.0,
+                "available": 1,
+                "occupied": 1,
+                "reserved": 0,
+                "unknown": 0,
+                "outOfService": 0
+              }
+            ]
+          }
+        }
+      ],
+      "fetched_at": "2025-06-11T11:21:03.193029"
+    },
+    {
+      "id": "TLLdBkmvjzlnSdf6Pcu_cg",
+      "name": "Gremo Na Elektriko",
+      "address": "Cankarjeva cesta 11, 1000 Ljubljana",
+      "position": {
+        "lat": 46.052752,
+        "lon": 14.501689
+      },
+      "availability": [
+        {
+          "type": "IEC62196Type2CCS",
+          "total": 2,
+          "availability": {
+            "current": {
+              "available": 1,
+              "occupied": 1,
+              "reserved": 0,
+              "unknown": 0,
+              "outOfService": 0
+            },
+            "perPowerLevel": [
+              {
+                "powerKW": 30.0,
+                "available": 1,
+                "occupied": 1,
+                "reserved": 0,
+                "unknown": 0,
+                "outOfService": 0
+              }
+            ]
+          }
+        }
+      ],
+      "fetched_at": "2025-06-11T11:21:03.501384"
+    },
+    {
+      "id": "iUfOUiYYIm7xD7C6wOjPHA",
+      "name": "Petrol",
+      "address": "Grudnovo nabre\u017eje 7, 1000 Ljubljana",
+      "position": {
+        "lat": 46.04515,
+        "lon": 14.50607
+      },
+      "availability": [
+        {
+          "type": "IEC62196Type2Outlet",
+          "total": 4,
+          "availability": {
+            "current": {
+              "available": 1,
+              "occupied": 3,
+              "reserved": 0,
+              "unknown": 0,
+              "outOfService": 0
+            },
+            "perPowerLevel": [
+              {
+                "powerKW": 22.0,
+                "available": 1,
+                "occupied": 3,
+                "reserved": 0,
+                "unknown": 0,
+                "outOfService": 0
+              }
+            ]
+          }
+        }
+      ],
+      "fetched_at": "2025-06-11T11:21:03.800541"
+    },
+    {
+      "id": "qXGvqnEXPDzB_ZrDg-w2Hw",
+      "name": "Gremo Na Elektriko",
+      "address": "Grajska planota 1, 1000 Ljubljana",
+      "position": {
+        "lat": 46.048306,
+        "lon": 14.509486
+      },
+      "availability": [
+        {
+          "type": "IEC62196Type2Outlet",
+          "total": 2,
+          "availability": {
+            "current": {
+              "available": 2,
+              "occupied": 0,
+              "reserved": 0,
+              "unknown": 0,
+              "outOfService": 0
+            },
+            "perPowerLevel": [
+              {
+                "powerKW": 22.0,
+                "available": 2,
+                "occupied": 0,
+                "reserved": 0,
+                "unknown": 0,
+                "outOfService": 0
+              }
+            ]
+          }
+        }
+      ],
+      "fetched_at": "2025-06-11T11:21:04.117974"
+    },
+    {
+      "id": "X-AL4G5cFaVYD-gIhSJqgQ",
+      "name": "Gremo Na Elektriko",
+      "address": "Trg Mladinskih delovnih brigad 14, 1000 Ljubljana",
+      "position": {
+        "lat": 46.046918,
+        "lon": 14.495718
+      },
+      "availability": [
+        {
+          "type": "IEC62196Type2Outlet",
+          "total": 2,
+          "availability": {
+            "current": {
+              "available": 2,
+              "occupied": 0,
+              "reserved": 0,
+              "unknown": 0,
+              "outOfService": 0
+            },
+            "perPowerLevel": [
+              {
+                "powerKW": 22.0,
+                "available": 2,
+                "occupied": 0,
+                "reserved": 0,
+                "unknown": 0,
+                "outOfService": 0
+              }
+            ]
+          }
+        }
+      ],
+      "fetched_at": "2025-06-11T11:21:04.416806"
+    },
+    {
+      "id": "voGjZ7di9_FoX4TiqRd9QQ",
+      "name": "Petrol",
+      "address": "\u0160tefanova ulica 9, 1000 Ljubljana",
+      "position": {
+        "lat": 46.053661,
+        "lon": 14.50198
+      },
+      "availability": [
+        {
+          "type": "IEC62196Type2Outlet",
+          "total": 6,
+          "availability": {
+            "current": {
+              "available": 3,
+              "occupied": 3,
+              "reserved": 0,
+              "unknown": 0,
+              "outOfService": 0
+            },
+            "perPowerLevel": [
+              {
+                "powerKW": 22.0,
+                "available": 3,
+                "occupied": 3,
+                "reserved": 0,
+                "unknown": 0,
+                "outOfService": 0
+              }
+            ]
+          }
+        }
+      ],
+      "fetched_at": "2025-06-11T11:21:04.716760"
+    },
+    {
+      "id": "j9jztpIz0scUQzdG4yApsg",
+      "name": "Gremo Na Elektriko",
+      "address": "Pre\u0161ernova cesta 22, 1000 Ljubljana",
+      "position": {
+        "lat": 46.053538,
+        "lon": 14.499683
+      },
+      "availability": [
+        {
+          "type": "IEC62196Type2Outlet",
+          "total": 2,
+          "availability": {
+            "current": {
+              "available": 2,
+              "occupied": 0,
+              "reserved": 0,
+              "unknown": 0,
+              "outOfService": 0
+            },
+            "perPowerLevel": [
+              {
+                "powerKW": 22.0,
+                "available": 2,
+                "occupied": 0,
+                "reserved": 0,
+                "unknown": 0,
+                "outOfService": 0
+              }
+            ]
+          }
+        }
+      ],
+      "fetched_at": "2025-06-11T11:21:05.025357"
+    },
+    {
+      "id": "DyUPcHRvmqUAJc7uMFbcJA",
+      "name": "Gremo Na Elektriko",
+      "address": "Vodnikov trg 2, 1000 Ljubljana",
+      "position": {
+        "lat": 46.050774,
+        "lon": 14.509591
+      },
+      "availability": [
+        {
+          "type": "IEC62196Type2Outlet",
+          "total": 2,
+          "availability": {
+            "current": {
+              "available": 2,
+              "occupied": 0,
+              "reserved": 0,
+              "unknown": 0,
+              "outOfService": 0
+            },
+            "perPowerLevel": [
+              {
+                "powerKW": 22.0,
+                "available": 2,
+                "occupied": 0,
+                "reserved": 0,
+                "unknown": 0,
+                "outOfService": 0
+              }
+            ]
+          }
+        }
+      ],
+      "fetched_at": "2025-06-11T11:21:05.331239"
+    },
+    {
+      "id": "YacGuAICw4rOvaHipGX7Lw",
+      "name": "Gremo Na Elektriko",
+      "address": "Miklo\u0161i\u010deva cesta 5, 1000 Ljubljana",
+      "position": {
+        "lat": 46.053415,
+        "lon": 14.506769
+      },
+      "availability": [
+        {
+          "type": "IEC62196Type2Outlet",
+          "total": 2,
+          "availability": {
+            "current": {
+              "available": 2,
+              "occupied": 0,
+              "reserved": 0,
+              "unknown": 0,
+              "outOfService": 0
+            },
+            "perPowerLevel": [
+              {
+                "powerKW": 22.0,
+                "available": 2,
+                "occupied": 0,
+                "reserved": 0,
+                "unknown": 0,
+                "outOfService": 0
+              }
+            ]
+          }
+        }
+      ],
+      "fetched_at": "2025-06-11T11:21:05.631999"
+    },
+    {
+      "id": "QTTdBJqXOGjwHWAoHzgoUA",
+      "name": "Petrol",
+      "address": "Trnovski Pristan 2, 1000 Ljubljana",
+      "position": {
+        "lat": 46.04331,
+        "lon": 14.505751
+      },
+      "availability": [
+        {
+          "type": "IEC62196Type2Outlet",
+          "total": 4,
+          "availability": {
+            "current": {
+              "available": 3,
+              "occupied": 1,
+              "reserved": 0,
+              "unknown": 0,
+              "outOfService": 0
+            },
+            "perPowerLevel": [
+              {
+                "powerKW": 22.0,
+                "available": 3,
+                "occupied": 1,
+                "reserved": 0,
+                "unknown": 0,
+                "outOfService": 0
+              }
+            ]
+          }
+        }
+      ],
+      "fetched_at": "2025-06-11T11:21:05.931304"
+    },
+    {
+      "id": "Ew8uS77YyTfJ5rANeS5E0g",
+      "name": "Gremo Na Elektriko",
+      "address": "Streli\u0161ka ulica 1, 1000 Ljubljana",
+      "position": {
+        "lat": 46.049893,
+        "lon": 14.510687
+      },
+      "availability": [
+        {
+          "type": "IEC62196Type2Outlet",
+          "total": 2,
+          "availability": {
+            "current": {
+              "available": 2,
+              "occupied": 0,
+              "reserved": 0,
+              "unknown": 0,
+              "outOfService": 0
+            },
+            "perPowerLevel": [
+              {
+                "powerKW": 22.0,
+                "available": 2,
+                "occupied": 0,
+                "reserved": 0,
+                "unknown": 0,
+                "outOfService": 0
+              }
+            ]
+          }
+        }
+      ],
+      "fetched_at": "2025-06-11T11:21:06.233742"
+    },
+    {
+      "id": "MRMfg6KmcVpvOEHuStq8Hg",
+      "name": "Gremo Na Elektriko",
+      "address": "Lepi pot 1, 1000 Ljubljana",
+      "position": {
+        "lat": 46.046931,
+        "lon": 14.494381
+      },
+      "availability": [
+        {
+          "type": "IEC62196Type2Outlet",
+          "total": 2,
+          "availability": {
+            "current": {
+              "available": 2,
+              "occupied": 0,
+              "reserved": 0,
+              "unknown": 0,
+              "outOfService": 0
+            },
+            "perPowerLevel": [
+              {
+                "powerKW": 22.0,
+                "available": 2,
+                "occupied": 0,
+                "reserved": 0,
+                "unknown": 0,
+                "outOfService": 0
+              }
+            ]
+          }
+        }
+      ],
+      "fetched_at": "2025-06-11T11:21:06.614792"
+    },
+    {
+      "id": "cXsN5ws9pM2zkr-x8dvoAw",
+      "name": "Gremo Na Elektriko",
+      "address": "Dalmatinova ulica 7, 1000 Ljubljana",
+      "position": {
+        "lat": 46.054153,
+        "lon": 14.505596
+      },
+      "availability": [
+        {
+          "type": "IEC62196Type2Outlet",
+          "total": 2,
+          "availability": {
+            "current": {
+              "available": 1,
+              "occupied": 1,
+              "reserved": 0,
+              "unknown": 0,
+              "outOfService": 0
+            },
+            "perPowerLevel": [
+              {
+                "powerKW": 22.0,
+                "available": 1,
+                "occupied": 1,
+                "reserved": 0,
+                "unknown": 0,
+                "outOfService": 0
+              }
+            ]
+          }
+        }
+      ],
+      "fetched_at": "2025-06-11T11:21:06.916710"
+    },
+    {
+      "id": "YKhfMXv7_USHfbEaDB90XQ",
+      "name": "Gremo Na Elektriko",
+      "address": "Tav\u010darjeva ulica 8A, 1000 Ljubljana",
+      "position": {
+        "lat": 46.054425,
+        "lon": 14.50696
+      },
+      "availability": [
+        {
+          "type": "IEC62196Type2Outlet",
+          "total": 2,
+          "availability": {
+            "current": {
+              "available": 0,
+              "occupied": 2,
+              "reserved": 0,
+              "unknown": 0,
+              "outOfService": 0
+            },
+            "perPowerLevel": [
+              {
+                "powerKW": 22.0,
+                "available": 0,
+                "occupied": 2,
+                "reserved": 0,
+                "unknown": 0,
+                "outOfService": 0
+              }
+            ]
+          }
+        }
+      ],
+      "fetched_at": "2025-06-11T11:21:07.300337"
+    },
+    {
+      "id": "CLB3QcRN6GxRHdmkCOkzlg",
+      "name": "Petrol",
+      "address": "Cigaletova ulica 7, 1000 Ljubljana",
+      "position": {
+        "lat": 46.054921,
+        "lon": 14.50614
+      },
+      "availability": [
+        {
+          "type": "IEC62196Type2Outlet",
+          "total": 4,
+          "availability": {
+            "current": {
+              "available": 3,
+              "occupied": 1,
+              "reserved": 0,
+              "unknown": 0,
+              "outOfService": 0
+            },
+            "perPowerLevel": [
+              {
+                "powerKW": 22.0,
+                "available": 3,
+                "occupied": 1,
+                "reserved": 0,
+                "unknown": 0,
+                "outOfService": 0
+              }
+            ]
+          }
+        }
+      ],
+      "fetched_at": "2025-06-11T11:21:07.595564"
+    },
+    {
+      "id": "Fivd-vgw6kSYLGN9Wf87HQ",
+      "name": "Gremo Na Elektriko",
+      "address": "Kersnikova ulica 3, 1000 Ljubljana",
+      "position": {
+        "lat": 46.055794,
+        "lon": 14.503811
+      },
+      "availability": [
+        {
+          "type": "IEC62196Type2Outlet",
+          "total": 2,
+          "availability": {
+            "current": {
+              "available": 2,
+              "occupied": 0,
+              "reserved": 0,
+              "unknown": 0,
+              "outOfService": 0
+            },
+            "perPowerLevel": [
+              {
+                "powerKW": 22.0,
+                "available": 2,
+                "occupied": 0,
+                "reserved": 0,
+                "unknown": 0,
+                "outOfService": 0
+              }
+            ]
+          }
+        }
+      ],
+      "fetched_at": "2025-06-11T11:21:07.975345"
+    },
+    {
+      "id": "5XHZ-V7huzt4ju6xn4WVkw",
+      "name": "Gremo Na Elektriko",
+      "address": "Celov\u0161ka cesta 3, 1000 Ljubljana",
+      "position": {
+        "lat": 46.056022,
+        "lon": 14.500332
+      },
+      "availability": [
+        {
+          "type": "IEC62196Type2CCS",
+          "total": 2,
+          "availability": {
+            "current": {
+              "available": 2,
+              "occupied": 0,
+              "reserved": 0,
+              "unknown": 0,
+              "outOfService": 0
+            },
+            "perPowerLevel": [
+              {
+                "powerKW": 22.0,
+                "available": 2,
+                "occupied": 0,
+                "reserved": 0,
+                "unknown": 0,
+                "outOfService": 0
+              }
+            ]
+          }
+        },
+        {
+          "type": "IEC62196Type2Outlet",
+          "total": 4,
+          "availability": {
+            "current": {
+              "available": 4,
+              "occupied": 0,
+              "reserved": 0,
+              "unknown": 0,
+              "outOfService": 0
+            },
+            "perPowerLevel": [
+              {
+                "powerKW": 22.0,
+                "available": 4,
+                "occupied": 0,
+                "reserved": 0,
+                "unknown": 0,
+                "outOfService": 0
+              }
+            ]
+          }
+        }
+      ],
+      "fetched_at": "2025-06-11T11:21:08.275662"
+    },
+    {
+      "id": "-dOmGzyXki5kYbHDJeONdg",
+      "name": "Petrol",
+      "address": "Langusova ulica 4, 1000 Ljubljana",
+      "position": {
+        "lat": 46.04545,
+        "lon": 14.492541
+      },
+      "availability": [
+        {
+          "type": "IEC62196Type2Outlet",
+          "total": 4,
+          "availability": {
+            "current": {
+              "available": 3,
+              "occupied": 1,
+              "reserved": 0,
+              "unknown": 0,
+              "outOfService": 0
+            },
+            "perPowerLevel": [
+              {
+                "powerKW": 22.0,
+                "available": 3,
+                "occupied": 1,
+                "reserved": 0,
+                "unknown": 0,
+                "outOfService": 0
+              }
+            ]
+          }
+        }
+      ],
+      "fetched_at": "2025-06-11T11:21:08.575390"
+    },
+    {
+      "id": "sWn33nq89RmYylB_PY4ODg",
+      "name": "Petrol",
+      "address": "Poljanski nasip 12, 1000 Ljubljana",
+      "position": {
+        "lat": 46.0515,
+        "lon": 14.512951
+      },
+      "availability": [
+        {
+          "type": "IEC62196Type2Outlet",
+          "total": 4,
+          "availability": {
+            "current": {
+              "available": 3,
+              "occupied": 1,
+              "reserved": 0,
+              "unknown": 0,
+              "outOfService": 0
+            },
+            "perPowerLevel": [
+              {
+                "powerKW": 22.0,
+                "available": 3,
+                "occupied": 1,
+                "reserved": 0,
+                "unknown": 0,
+                "outOfService": 0
+              }
+            ]
+          }
+        }
+      ],
+      "fetched_at": "2025-06-11T11:21:08.885398"
+    },
+    {
+      "id": "PadGq-xkmNlyA6-0ZylsRA",
+      "name": "Porsche Slovenija",
+      "address": "Komenskega ulica 30, 1000 Ljubljana",
+      "position": {
+        "lat": 46.05309,
+        "lon": 14.512651
+      },
+      "availability": [
+        {
+          "type": "IEC62196Type2Outlet",
+          "total": 1,
+          "availability": {
+            "current": {
+              "available": 1,
+              "occupied": 0,
+              "reserved": 0,
+              "unknown": 0,
+              "outOfService": 0
+            },
+            "perPowerLevel": [
+              {
+                "powerKW": 9.0,
+                "available": 1,
+                "occupied": 0,
+                "reserved": 0,
+                "unknown": 0,
+                "outOfService": 0
+              }
+            ]
+          }
+        }
+      ],
+      "fetched_at": "2025-06-11T11:21:09.188161"
+    },
+    {
+      "id": "E8YC8RLcx4rDa-XNXT48ZQ",
+      "name": "Gremo Na Elektriko",
+      "address": "Dvorakova ulica 3, 1000 Ljubljana",
+      "position": {
+        "lat": 46.056785,
+        "lon": 14.504828
+      },
+      "availability": [
+        {
+          "type": "IEC62196Type2Outlet",
+          "total": 6,
+          "availability": {
+            "current": {
+              "available": 6,
+              "occupied": 0,
+              "reserved": 0,
+              "unknown": 0,
+              "outOfService": 0
+            },
+            "perPowerLevel": [
+              {
+                "powerKW": 22.0,
+                "available": 6,
+                "occupied": 0,
+                "reserved": 0,
+                "unknown": 0,
+                "outOfService": 0
+              }
+            ]
+          }
+        }
+      ],
+      "fetched_at": "2025-06-11T11:21:09.487263"
+    },
+    {
+      "id": "4R6tB6BM5JfyMjJK5NsMcQ",
+      "name": "Gremo Na Elektriko",
+      "address": "Cigaletova ulica 13, 1000 Ljubljana",
+      "position": {
+        "lat": 46.056504,
+        "lon": 14.506752
+      },
+      "availability": [
+        {
+          "type": "IEC62196Type2Outlet",
+          "total": 2,
+          "availability": {
+            "current": {
+              "available": 0,
+              "occupied": 2,
+              "reserved": 0,
+              "unknown": 0,
+              "outOfService": 0
+            },
+            "perPowerLevel": [
+              {
+                "powerKW": 22.0,
+                "available": 0,
+                "occupied": 2,
+                "reserved": 0,
+                "unknown": 0,
+                "outOfService": 0
+              }
+            ]
+          }
+        }
+      ],
+      "fetched_at": "2025-06-11T11:21:09.787692"
+    },
+    {
+      "id": "bC4VxTH_AM3kevwpTVdxDg",
+      "name": "Gremo Na Elektriko",
+      "address": "Gunduli\u010deva ulica 7, 1000 Ljubljana",
+      "position": {
+        "lat": 46.042458,
+        "lon": 14.494009
+      },
+      "availability": [
+        {
+          "type": "IEC62196Type2Outlet",
+          "total": 2,
+          "availability": {
+            "current": {
+              "available": 1,
+              "occupied": 1,
+              "reserved": 0,
+              "unknown": 0,
+              "outOfService": 0
+            },
+            "perPowerLevel": [
+              {
+                "powerKW": 22.0,
+                "available": 1,
+                "occupied": 1,
+                "reserved": 0,
+                "unknown": 0,
+                "outOfService": 0
+              }
+            ]
+          }
+        }
+      ],
+      "fetched_at": "2025-06-11T11:21:10.228185"
+    },
+    {
+      "id": "uUYQ6pW7Y9PkDebXORKhXA",
+      "name": "Petrol",
+      "address": "Streli\u0161ka ulica 24, 1000 Ljubljana",
+      "position": {
+        "lat": 46.04699,
+        "lon": 14.514691
+      },
+      "availability": [
+        {
+          "type": "IEC62196Type2Outlet",
+          "total": 4,
+          "availability": {
+            "current": {
+              "available": 4,
+              "occupied": 0,
+              "reserved": 0,
+              "unknown": 0,
+              "outOfService": 0
+            },
+            "perPowerLevel": [
+              {
+                "powerKW": 22.0,
+                "available": 4,
+                "occupied": 0,
+                "reserved": 0,
+                "unknown": 0,
+                "outOfService": 0
+              }
+            ]
+          }
+        }
+      ],
+      "fetched_at": "2025-06-11T11:21:10.531842"
+    },
+    {
+      "id": "pZl7A2qVPDzMpyUpp1HAfg",
+      "name": "Gremo Na Elektriko",
+      "address": "Dvorakova ulica 10, 1000 Ljubljana",
+      "position": {
+        "lat": 46.05717,
+        "lon": 14.504255
+      },
+      "availability": [
+        {
+          "type": "IEC62196Type2Outlet",
+          "total": 2,
+          "availability": {
+            "current": {
+              "available": 0,
+              "occupied": 2,
+              "reserved": 0,
+              "unknown": 0,
+              "outOfService": 0
+            },
+            "perPowerLevel": [
+              {
+                "powerKW": 22.0,
+                "available": 0,
+                "occupied": 2,
+                "reserved": 0,
+                "unknown": 0,
+                "outOfService": 0
+              }
+            ]
+          }
+        }
+      ],
+      "fetched_at": "2025-06-11T11:21:10.831105"
+    },
+    {
+      "id": "0y1H9q5qCcIrind2Od0bSQ",
+      "name": "Petrol",
+      "address": "Pra\u017eakova ulica 5, 1000 Ljubljana",
+      "position": {
+        "lat": 46.056671,
+        "lon": 14.50704
+      },
+      "availability": [
+        {
+          "type": "IEC62196Type2Outlet",
+          "total": 4,
+          "availability": {
+            "current": {
+              "available": 4,
+              "occupied": 0,
+              "reserved": 0,
+              "unknown": 0,
+              "outOfService": 0
+            },
+            "perPowerLevel": [
+              {
+                "powerKW": 22.0,
+                "available": 4,
+                "occupied": 0,
+                "reserved": 0,
+                "unknown": 0,
+                "outOfService": 0
+              }
+            ]
+          }
+        }
+      ],
+      "fetched_at": "2025-06-11T11:21:11.130321"
+    },
+    {
+      "id": "zwZLhhEb_1vjds8yIPRQUQ",
+      "name": "Gremo Na Elektriko",
+      "address": "Gunduli\u010deva ulica 7, 1000 Ljubljana",
+      "position": {
+        "lat": 46.042229,
+        "lon": 14.493498
+      },
+      "availability": [
+        {
+          "type": "IEC62196Type2Outlet",
+          "total": 3,
+          "availability": {
+            "current": {
+              "available": 3,
+              "occupied": 0,
+              "reserved": 0,
+              "unknown": 0,
+              "outOfService": 0
+            },
+            "perPowerLevel": [
+              {
+                "powerKW": 22.0,
+                "available": 3,
+                "occupied": 0,
+                "reserved": 0,
+                "unknown": 0,
+                "outOfService": 0
+              }
+            ]
+          }
+        }
+      ],
+      "fetched_at": "2025-06-11T11:21:11.432847"
+    },
+    {
+      "id": "qQ8FWgeEqqyD0qR1cRelow",
+      "name": "Petrol",
+      "address": "Miklo\u0161i\u010deva cesta 15, 1000 Ljubljana",
+      "position": {
+        "lat": 46.056921,
+        "lon": 14.50819
+      },
+      "availability": [
+        {
+          "type": "IEC62196Type2Outlet",
+          "total": 4,
+          "availability": {
+            "current": {
+              "available": 4,
+              "occupied": 0,
+              "reserved": 0,
+              "unknown": 0,
+              "outOfService": 0
+            },
+            "perPowerLevel": [
+              {
+                "powerKW": 22.0,
+                "available": 4,
+                "occupied": 0,
+                "reserved": 0,
+                "unknown": 0,
+                "outOfService": 0
+              }
+            ]
+          }
+        }
+      ],
+      "fetched_at": "2025-06-11T11:21:11.736838"
+    },
+    {
+      "id": "iP131v9v7jpD31FGyKZhMw",
+      "name": "Petrol",
+      "address": "Kotnikova ulica 6, 1000 Ljubljana",
+      "position": {
+        "lat": 46.054571,
+        "lon": 14.51315
+      },
+      "availability": [
+        {
+          "type": "IEC62196Type2Outlet",
+          "total": 2,
+          "availability": {
+            "current": {
+              "available": 0,
+              "occupied": 2,
+              "reserved": 0,
+              "unknown": 0,
+              "outOfService": 0
+            },
+            "perPowerLevel": [
+              {
+                "powerKW": 22.0,
+                "available": 0,
+                "occupied": 2,
+                "reserved": 0,
+                "unknown": 0,
+                "outOfService": 0
+              }
+            ]
+          }
+        }
+      ],
+      "fetched_at": "2025-06-11T11:21:12.041210"
+    },
+    {
+      "id": "H03vLgRtq6UdHM69wVY9tA",
+      "name": "Gremo Na Elektriko",
+      "address": "Trubarjeva cesta 72, 1000 Ljubljana",
+      "position": {
+        "lat": 46.051073,
+        "lon": 14.515811
+      },
+      "availability": [
+        {
+          "type": "IEC62196Type2Outlet",
+          "total": 6,
+          "availability": {
+            "current": {
+              "available": 6,
+              "occupied": 0,
+              "reserved": 0,
+              "unknown": 0,
+              "outOfService": 0
+            },
+            "perPowerLevel": [
+              {
+                "powerKW": 11.0,
+                "available": 6,
+                "occupied": 0,
+                "reserved": 0,
+                "unknown": 0,
+                "outOfService": 0
+              }
+            ]
+          }
+        }
+      ],
+      "fetched_at": "2025-06-11T11:21:12.340780"
+    },
+    {
+      "id": "iKn-jLd0mBMeUwHeD1p84w",
+      "name": "Mega M d.o.o.",
+      "address": "Kotnikova ulica 9, 1000 Ljubljana",
+      "position": {
+        "lat": 46.054752,
+        "lon": 14.513071
+      },
+      "availability": [
+        {
+          "type": "IEC62196Type2Outlet",
+          "total": 2,
+          "availability": {
+            "current": {
+              "available": 0,
+              "occupied": 0,
+              "reserved": 0,
+              "unknown": 0,
+              "outOfService": 2
+            },
+            "perPowerLevel": [
+              {
+                "powerKW": 22.0,
+                "available": 0,
+                "occupied": 0,
+                "reserved": 0,
+                "unknown": 0,
+                "outOfService": 2
+              }
+            ]
+          }
+        }
+      ],
+      "fetched_at": "2025-06-11T11:21:12.641056"
+    }
+  ]
+}

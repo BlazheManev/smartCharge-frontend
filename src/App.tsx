@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import MapView from "./pages/MapView";
 import AdminPanel from "./pages/AdminPanel";
+import DriftReports from "./pages/DriftReports";
 
 function App() {
   return (
@@ -16,11 +17,15 @@ function App() {
       >
         <Link to="/">🗺️ Mapa</Link>
         <Link to="/admin">🧠 Admin</Link>
+        <Link to="/drift">📉 Poročila</Link>
+
       </nav>
 
       <Routes>
         <Route path="/" element={<MapView />} />
         <Route path="/admin" element={<AdminPanel />} />
+        <Route path="/drift" element={<DriftReports />} />
+
       </Routes>
     </Router>
   );

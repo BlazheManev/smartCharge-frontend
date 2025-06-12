@@ -10,7 +10,7 @@ export default function DriftReports() {
   const [reports, setReports] = useState<Report[]>([]);
 
   useEffect(() => {
-    fetch("https://your-backend.com/reports/list")
+    fetch("https://smartcharge-backend.onrender.com/reports/list")
       .then((res) => res.json())
       .then(setReports)
       .catch(console.error);

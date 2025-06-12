@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import MapView from "./pages/MapView";
 import AdminPanel from "./pages/AdminPanel";
 import DriftReports from "./pages/DriftReports";
+import ReportViewer from "./pages/ReportViewer";
 
 function App() {
   return (
@@ -25,7 +26,7 @@ function App() {
         <Route path="/" element={<MapView />} />
         <Route path="/admin" element={<AdminPanel />} />
         <Route path="/drift" element={<DriftReports />} />
-
+        <Route path="/report/:id" element={<ReportViewer />} />
       </Routes>
     </Router>
   );

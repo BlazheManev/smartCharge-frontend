@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 interface Report {
   _id: string;
@@ -9,7 +10,6 @@ interface Report {
 
 export default function DriftReports() {
   const [reports, setReports] = useState<Report[]>([]);
-  const [selectedHtml, setSelectedHtml] = useState<string | null>(null);
 
   useEffect(() => {
     fetch("https://smartcharge-backend.onrender.com/reports/list")
@@ -18,38 +18,67 @@ export default function DriftReports() {
       .catch(console.error);
   }, []);
 
-  const loadReportHtml = async (id: string) => {
-    const res = await fetch(`https://smartcharge-backend.onrender.com/reports/view/${id}`);
-    const html = await res.text();
-    setSelectedHtml(html);
-  };
-
   return (
-    <div style={{ padding: "2rem" }}>
-      <h2>📉 Drift & Expectation Reports</h2>
+    <div style={{ padding: "2rem", maxWidth: "1200px", margin: "0 auto" }}>
+      <h2 style={{ fontSize: "1.8rem", marginBottom: "1.5rem" }}>
+        📉 Drift & Expectation Reports
+      </h2>
 
       {reports.length === 0 ? (
-        <p>🔄 Loading reports...</p>
+        <p>🔄 Loading...</p>
       ) : (
-        <ul>
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fill, minmax(250px, 1fr))",
+            gap: "1.5rem",
+          }}
+        >
           {reports.map((r) => (
-            <li key={r._id}>
-              <b>{r.type === "drift" ? "🧪 Drift" : "🧾 Expectation"}</b> —{" "}
-              <button
-                style={{ color: "blue", textDecoration: "underline", background: "none", border: "none", cursor: "pointer" }}
-                onClick={() => loadReportHtml(r._id)}
+            <Link
+              to={`/report/${r._id}`}
+              key={r._id}
+              style={{
+                textDecoration: "none",
+                color: "inherit",
+              }}
+            >
+              <div
+                style={{
+                  border: "1px solid #ddd",
+                  borderRadius: "1rem",
+                  padding: "1rem",
+                  backgroundColor: "#fefefe",
+                  transition: "box-shadow 0.2s",
+                  boxShadow: "0 2px 4px rgba(0,0,0,0.05)",
+                }}
+                onMouseEnter={(e) =>
+                  ((e.currentTarget.style.boxShadow =
+                    "0 4px 12px rgba(0,0,0,0.1)"))
+                }
+                onMouseLeave={(e) =>
+                  ((e.currentTarget.style.boxShadow =
+                    "0 2px 4px rgba(0,0,0,0.05)"))
+                }
               >
-                {r.station_id}
-              </button>
-            </li>
+                <h3 style={{ marginBottom: "0.5rem" }}>
+                  {r.type === "drift" ? "🧪 Drift Report" : "🧾 Expectation"}
+                </h3>
+                <p
+                  style={{
+                    fontWeight: "bold",
+                    color: "#007bff",
+                    marginBottom: "0.5rem",
+                  }}
+                >
+                  Station: {r.station_id}
+                </p>
+                <p style={{ fontSize: "0.85rem", color: "#666" }}>
+                  File: {r.filename}
+                </p>
+              </div>
+            </Link>
           ))}
-        </ul>
-      )}
-
-      {selectedHtml && (
-        <div style={{ marginTop: "2rem", border: "1px solid #ccc", padding: "1rem" }}>
-          <h3>📊 Report Preview</h3>
-          <div dangerouslySetInnerHTML={{ __html: selectedHtml }} />
         </div>
       )}
     </div>

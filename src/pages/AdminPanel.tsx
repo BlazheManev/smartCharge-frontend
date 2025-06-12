@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import type { ModelMeta } from "../types/Model";
 import type { Station } from "../types/Station";
 import rawModelsData from "../../public/ml_models.json";
-import stationRawData from "../../src/api/ljubljana_ev_availability_combined.json";
+import { fetchStations } from "../api/api";
 
 type GroupedModels = {
   [date: string]: {
@@ -19,11 +19,19 @@ export default function AdminPanel() {
   const [selectedStation, setSelectedStation] = useState<string>("");
   const [selectedDate, setSelectedDate] = useState<string>("");
   const [isLoading, setIsLoading] = useState<boolean>(true);
+  const [stationsInfo, setStationsInfo] = useState<Record<string, Station>>({});
 
-  const stationsInfo: Record<string, Station> = {};
-  for (const s of stationRawData.results) {
-    stationsInfo[s.id] = s;
-  }
+  useEffect(() => {
+    fetchStations()
+      .then((stations) => {
+        const info: Record<string, Station> = {};
+        for (const s of stations) {
+          info[s.id] = s;
+        }
+        setStationsInfo(info);
+      })
+      .catch(console.error);
+  }, []);
 
   useEffect(() => {
     const timer = setTimeout(() => {

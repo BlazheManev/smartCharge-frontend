@@ -1,6 +1,26 @@
 import type { Station } from "../types/Station";
-import stationsData from "./ljubljana_ev_availability_combined.json";
 
+/**
+ * Fetches the latest EV station availability from the backend.
+ * @returns A promise resolving to a list of stations.
+ */
 export const fetchStations = async (): Promise<Station[]> => {
-  return stationsData.results;
+  try {
+    const res = await fetch("https://smartcharge-backend.onrender.com/api/ev-data");
+
+    if (!res.ok) {
+      throw new Error("Failed to fetch EV station data");
+    }
+
+    const data = await res.json();
+
+    if (!data.results || !Array.isArray(data.results)) {
+      throw new Error("Malformed response: missing results array");
+    }
+
+    return data.results as Station[];
+  } catch (error) {
+    console.error("❌ Error fetching stations:", error);
+    return []; // Or throw error if you want to crash UI
+  }
 };

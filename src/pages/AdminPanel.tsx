@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import type { ModelMeta } from "../types/Model";
 import type { Station } from "../types/Station";
-import rawModelsData from "../../public/ml_models.json";
+import { fetchModelMetadata } from "../api/api";
 import { fetchStations } from "../api/api";
 
 type GroupedModels = {
@@ -35,29 +35,37 @@ export default function AdminPanel() {
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      const normalized: ModelMeta[] = rawModelsData.map((entry: any) => ({
-        run_id: entry.run_id,
-        station: entry["params.station"],
-        window_size: Number(entry["params.window_size"]),
-        rmse: entry["metrics.rmse"] ?? 0,
-        mae: entry["metrics.mae"] ?? 0,
-        start_time: entry.start_time,
-      }));
+      fetchModelMetadata()
+        .then((rawModelsData) => {
+          const normalized: ModelMeta[] = rawModelsData.map((entry: any) => ({
+            run_id: entry.run_id,
+            station: entry["params.station"],
+            window_size: Number(entry["params.window_size"]),
+            rmse: entry["metrics.rmse"] ?? 0,
+            mae: entry["metrics.mae"] ?? 0,
+            start_time: entry.start_time,
+          }));
 
-      const groupedData: GroupedModels = {};
+          const groupedData: GroupedModels = {};
 
-      for (const model of normalized) {
-        const date = formatDate(model.start_time);
-        if (!groupedData[date]) groupedData[date] = {};
-        if (!groupedData[date][model.station]) groupedData[date][model.station] = [];
-        groupedData[date][model.station].push(model);
-      }
+          for (const model of normalized) {
+            const date = formatDate(model.start_time);
+            if (!groupedData[date]) groupedData[date] = {};
+            if (!groupedData[date][model.station]) groupedData[date][model.station] = [];
+            groupedData[date][model.station].push(model);
+          }
 
-      setGrouped(groupedData);
-      setIsLoading(false);
+          setGrouped(groupedData);
+          setIsLoading(false);
+        })
+        .catch((err) => {
+          console.error("❌ Failed to load model metadata:", err);
+          setIsLoading(false);
+        });
     }, 600);
     return () => clearTimeout(timer);
   }, []);
+
 
   const filteredData = Object.entries(grouped)
     .filter(([date]) => !selectedDate || date === selectedDate)

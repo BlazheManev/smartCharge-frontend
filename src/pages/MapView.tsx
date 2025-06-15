@@ -4,6 +4,8 @@ import L, { type LatLngTuple, Map as LeafletMap } from "leaflet";
 import type { Station } from "../types/Station";
 import { fetchStations } from "../api/api";
 import chargingStationIcon from "../assets/charging-station.png";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 
 const customIcon = new L.Icon({
   iconUrl: chargingStationIcon,
@@ -17,6 +19,10 @@ export default function MapView() {
   const mapRef = useRef<LeafletMap | null>(null);
   const markerRefs = useRef<Record<string, L.Marker>>({});
   const [sidebarOpen, setSidebarOpen] = useState<boolean>(false);
+  const [selectedStation, setSelectedStation] = useState<Station | null>(null);
+  const [selectedDate, setSelectedDate] = useState<Date | null>(null);
+  const [confidence, setConfidence] = useState<string>("");
+  const [statusText, setStatusText] = useState<string>("");
 
   const ljubljana: LatLngTuple = [46.05, 14.5];
 
@@ -30,10 +36,31 @@ export default function MapView() {
     if (mapRef.current) {
       const { lat, lon } = station.position;
       mapRef.current.flyTo([lat, lon], 17, { duration: 1.2 });
-
-      // ⬇️ Odpri popup
       const marker = markerRefs.current[station.id];
       if (marker) marker.openPopup();
+    }
+  };
+
+  const handlePredict = async () => {
+    if (!selectedStation || !selectedDate) return;
+
+    try {
+      const res = await fetch("https://smartcharge-backend.onrender.com/api/predict", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          station_id: selectedStation.id,
+          datetime: selectedDate.toISOString(),
+        }),
+      });
+
+      const data = await res.json();
+      setConfidence(data.prediction);
+      setStatusText(data.status);
+    } catch (err) {
+      console.error("Prediction failed:", err);
+      setConfidence("");
+      setStatusText("❌ Napaka pri napovedi.");
     }
   };
 
@@ -58,6 +85,13 @@ export default function MapView() {
             ref={(ref) => {
               if (ref) markerRefs.current[station.id] = ref;
             }}
+            eventHandlers={{
+              click: () => {
+                setSelectedStation(station);
+                setConfidence("");
+                setStatusText("");
+              },
+            }}
           >
             <Popup>
               <strong>{station.name}</strong><br />
@@ -74,13 +108,47 @@ export default function MapView() {
                   </div>
                 );
               })}
+              <div style={{ marginTop: "1rem" }}>
+                <b>📅 Izberi čas za napoved:</b><br />
+                <DatePicker
+                  selected={selectedDate}
+                  onChange={(date) => setSelectedDate(date)}
+                  showTimeSelect
+                  timeFormat="HH:mm"
+                  timeIntervals={15}
+                  dateFormat="Pp"
+                  placeholderText="Izberi datum in uro"
+                  className="react-datepicker"
+                />
+                <button
+                  onClick={handlePredict}
+                  style={{
+                    marginTop: "0.5rem",
+                    padding: "0.3rem 0.6rem",
+                    backgroundColor: "#007bff",
+                    color: "#fff",
+                    border: "none",
+                    borderRadius: "4px",
+                    cursor: "pointer",
+                  }}
+                >
+                  🔮 Napovej
+                </button>
+
+                {confidence && (
+                  <div style={{ marginTop: "0.5rem", color: "#444" }}>
+                    <b>📊 Napoved:</b><br />
+                    🔢 Verjetnost: <span style={{ fontWeight: 600 }}>{confidence}</span><br />
+                    📍 Status: <span style={{ fontStyle: "italic" }}>{statusText}</span>
+                  </div>
+                )}
+              </div>
               <small><i>Fetched: {new Date(station.fetched_at).toLocaleString()}</i></small>
             </Popup>
           </Marker>
         ))}
       </MapContainer>
 
-      {/* 🍔 Hamburger Menu (RIGHT side) */}
       <button
         onClick={() => setSidebarOpen(!sidebarOpen)}
         style={{
@@ -98,7 +166,6 @@ export default function MapView() {
         ☰
       </button>
 
-      {/* 📋 Sidebar (toggles) */}
       {sidebarOpen && (
         <div
           style={{

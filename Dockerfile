@@ -2,20 +2,19 @@
 FROM node:18 AS builder
 
 WORKDIR /app
+COPY package*.json ./
+
+# Install dependencies
+RUN npm ci
+
 COPY . .
 
-# Install deps and build
-RUN npm ci
 RUN npm run build
 
-# Step 2: Serve with a lightweight server
 FROM nginx:alpine
 
-# Copy build files
 COPY --from=builder /app/dist /usr/share/nginx/html
 
-# Optional: custom nginx config
-# COPY nginx.conf /etc/nginx/conf.d/default.conf
 
 EXPOSE 80
 

@@ -1,24 +1,23 @@
-name: 🔁 Build and Push Frontend & Backend
+name: 🔁 Build and Push Frontend
 
 on:
   push:
     branches:
-      - main  
+      - main  # Trigger only on main branch
 
 jobs:
-  build-and-push:
+  build-and-push-frontend:
     runs-on: ubuntu-latest
 
     steps:
       - name: 🔄 Checkout code
         uses: actions/checkout@v3
 
-      - name: 🔐 Docker login
+      - name: 🔐 Docker login to Docker Hub
         run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
 
-      # Build and Push Frontend
-      - name: 🛠️ Build frontend
+      - name: 🛠️ Build frontend Docker image
         run: docker build -t ${{ secrets.DOCKER_USERNAME }}/smartcharge-frontend ./frontend
 
-      - name: 📤 Push frontend
+      - name: 📤 Push frontend image to Docker Hub
         run: docker push ${{ secrets.DOCKER_USERNAME }}/smartcharge-frontend

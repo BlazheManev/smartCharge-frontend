@@ -4,8 +4,6 @@ import L, { type LatLngTuple, Map as LeafletMap } from "leaflet";
 import type { Station } from "../types/Station";
 import { fetchStations } from "../api/api";
 import chargingStationIcon from "../assets/charging-station.png";
-import DatePicker from "react-datepicker";
-import "react-datepicker/dist/react-datepicker.css";
 
 const customIcon = new L.Icon({
   iconUrl: chargingStationIcon,
@@ -93,57 +91,96 @@ export default function MapView() {
               },
             }}
           >
-            <Popup>
-              <strong>{station.name}</strong><br />
-              {station.address}<br />
-              <hr />
-              {station.availability.map((a, idx) => {
-                const current = a.availability.current;
-                return (
-                  <div key={idx} style={{ marginBottom: "0.5rem" }}>
-                    <b>{a.type}</b><br />
-                    🟢 {current.available} available<br />
-                    🔴 {current.occupied} occupied<br />
-                    📦 {a.total} total
-                  </div>
-                );
-              })}
-              <div style={{ marginTop: "1rem" }}>
-                <b>📅 Izberi čas za napoved:</b><br />
-                <DatePicker
-                  selected={selectedDate}
-                  onChange={(date) => setSelectedDate(date)}
-                  showTimeSelect
-                  timeFormat="HH:mm"
-                  timeIntervals={15}
-                  dateFormat="Pp"
-                  placeholderText="Izberi datum in uro"
-                  className="react-datepicker"
-                />
-                <button
-                  onClick={handlePredict}
-                  style={{
-                    marginTop: "0.5rem",
-                    padding: "0.3rem 0.6rem",
-                    backgroundColor: "#007bff",
-                    color: "#fff",
-                    border: "none",
-                    borderRadius: "4px",
-                    cursor: "pointer",
-                  }}
-                >
-                  🔮 Napovej
-                </button>
+            <Popup autoClose={false} closeOnClick={false}>
+              <div style={{ maxWidth: "250px", fontSize: "0.9rem", lineHeight: 1.4 }}>
+                <strong>{station.name}</strong><br />
+                {station.address}
+                <hr style={{ margin: "0.5rem 0" }} />
+                {station.availability.map((a, idx) => {
+                  const current = a.availability.current;
+                  return (
+                    <div key={idx} style={{ marginBottom: "0.5rem" }}>
+                      <b>{a.type}</b><br />
+                      🟢 {current.available} available<br />
+                      🔴 {current.occupied} occupied<br />
+                      📦 {a.total} total
+                    </div>
+                  );
+                })}
 
-                {confidence && (
-                  <div style={{ marginTop: "0.5rem", color: "#444" }}>
-                    <b>📊 Napoved:</b><br />
-                    🔢 Verjetnost: <span style={{ fontWeight: 600 }}>{confidence}</span><br />
-                    📍 Status: <span style={{ fontStyle: "italic" }}>{statusText}</span>
+                <div
+                  onClick={(e) => e.stopPropagation()}
+                  style={{ marginTop: "1rem", fontSize: "0.85rem" }}
+                >
+                  <b>📅 Izberi datum in čas:</b><br />
+                  <div style={{ display: "flex", gap: "0.5rem", marginTop: "0.3rem" }}>
+                    <input
+                      type="date"
+                      value={selectedDate ? selectedDate.toISOString().split("T")[0] : ""}
+                      onChange={(e) => {
+                        const newDate = new Date(e.target.value);
+                        if (selectedDate) {
+                          newDate.setHours(selectedDate.getHours(), selectedDate.getMinutes());
+                        }
+                        setSelectedDate(newDate);
+                      }}
+                      style={{
+                        padding: "0.3rem",
+                        border: "1px solid #ccc",
+                        borderRadius: "4px",
+                        flex: 1,
+                      }}
+                    />
+
+                    <input
+                      type="time"
+                      value={
+                        selectedDate
+                          ? selectedDate.toTimeString().slice(0, 5)
+                          : ""
+                      }
+                      onChange={(e) => {
+                        const [hours, minutes] = e.target.value.split(":").map(Number);
+                        const newDate = selectedDate ? new Date(selectedDate) : new Date();
+                        newDate.setHours(hours);
+                        newDate.setMinutes(minutes);
+                        setSelectedDate(newDate);
+                      }}
+                      style={{
+                        padding: "0.3rem",
+                        border: "1px solid #ccc",
+                        borderRadius: "4px",
+                        flex: 1,
+                      }}
+                    />
                   </div>
-                )}
+
+                  <button
+                    onClick={handlePredict}
+                    style={{
+                      marginTop: "0.5rem",
+                      padding: "0.4rem 0.6rem",
+                      backgroundColor: "#007bff",
+                      color: "#fff",
+                      border: "none",
+                      borderRadius: "4px",
+                      cursor: "pointer",
+                      width: "100%",
+                    }}
+                  >
+                    🔮 Napovej
+                  </button>
+
+                  {confidence && (
+                    <div style={{ marginTop: "0.5rem", color: "#444" }}>
+                      <b>📊 Napoved:</b><br />
+                      🔢 Verjetnost: <span style={{ fontWeight: 600 }}>{confidence}</span><br />
+                      📍 Status: <span style={{ fontStyle: "italic" }}>{statusText}</span>
+                    </div>
+                  )}
+                </div>
+                <small><i>Fetched: {new Date(station.fetched_at).toLocaleString()}</i></small>
               </div>
-              <small><i>Fetched: {new Date(station.fetched_at).toLocaleString()}</i></small>
             </Popup>
           </Marker>
         ))}

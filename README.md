@@ -7,6 +7,9 @@ A responsive web interface for SmartCharge AI — an intelligent system for pred
 ## 🚀 Features
 
 * 📍 **Map View**: Real-time display of EV stations with occupancy info
+* 🔮 **Prediction Dialog**: Click on a station, select a future date/time, and view **predicted availability**
+  * Predictions are based on trained neural network models
+  * Output includes **likelihood score** and a qualitative label (e.g., “Likely Available”)
 * 🧠 **Admin Panel**: Track model performance (RMSE, MAE, run IDs)
 * 📊 **Drift Reports**: Visual diagnostics for data and model drift
 * 🗂 **Dynamic filtering**: By station and date
@@ -36,6 +39,21 @@ src/
 ├── App.tsx           # Root component
 ├── main.tsx          # Entry point
 ```
+
+---
+
+## 🔮 Predictive UX
+
+- Select a charging station from the map
+- Use the built-in date picker to choose a future timestamp
+- Click "🔮 Napovej" to get the system's prediction
+- You'll see a score like `Probability: 0.72` along with a label:
+
+| Score Range | Interpretation            |
+|-------------|----------------------------|
+| 0.7 - 1.0   | ✅ High chance available     |
+| 0.3 - 0.7   | ⚠️ Might be occupied         |
+| 0.0 - 0.3   | 🚫 Likely not available      |
 
 ---
 
@@ -96,6 +114,7 @@ Endpoints used:
 * `/api/ev-data` → Fetch station info
 * `/api/ml-models` → Fetch model metadata
 * `/reports/view/:id` → Fetch HTML reports
+* `/api/predict` → Predict occupancy for selected time
 
 ---
 
@@ -112,4 +131,3 @@ Frontend is deployed on **Vercel**:
 Blazhe Manev
 
 ---
-

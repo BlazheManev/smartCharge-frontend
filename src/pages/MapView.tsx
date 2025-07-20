@@ -43,7 +43,7 @@ export default function MapView() {
     if (!selectedStation || !selectedDate) return;
 
     try {
-      const res = await fetch("https://smartcharge-backend.onrender.com/api/predict", {
+      const res = await fetch("https://smartcharge-backend-wg0m.onrender.com/api/predict", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

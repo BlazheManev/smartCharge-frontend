@@ -13,7 +13,7 @@ export default function ReportViewer() {
   const [error, setError] = useState<string>("");
 
   useEffect(() => {
-    fetch(`https://smartcharge-backend.onrender.com/reports/view/${id}`)
+    fetch(`https://smartcharge-backend-wg0m.onrender.com/reports/view/${id}`)
       .then((res) => {
         if (!res.ok) throw new Error("Failed to fetch");
         return res.json();
@@ -33,7 +33,7 @@ return (
     </h2>
     {report.type === 'drift' ? (
       <iframe
-        src={`https://smartcharge-backend.onrender.com/reports/raw/${id}`}
+        src={`https://smartcharge-backend-wg0m.onrender.com/reports/raw/${id}`}
         title="Drift Report"
         width="100%"
         height="800"

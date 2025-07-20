@@ -7,7 +7,7 @@ import type { Station } from "../types/Station";
  */
 export const fetchStations = async (): Promise<Station[]> => {
   try {
-    const res = await fetch("https://smartcharge-backend.onrender.com/api/ev-data");
+    const res = await fetch("https://smartcharge-backend-wg0m.onrender.com/api/ev-data");
 
     if (!res.ok) {
       throw new Error("Failed to fetch EV station data");
@@ -32,7 +32,7 @@ export const fetchStations = async (): Promise<Station[]> => {
  */
 export const fetchModelMetadata = async (): Promise<ModelMeta[]> => {
   try {
-    const res = await fetch("https://smartcharge-backend.onrender.com/api/ml-models");
+    const res = await fetch("https://smartcharge-backend-wg0m.onrender.com/api/ml-models");
 
     if (!res.ok) {
       throw new Error("Failed to fetch model metadata");

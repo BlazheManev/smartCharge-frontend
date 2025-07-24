@@ -43,11 +43,12 @@ export default function MapView() {
     if (!selectedStation || !selectedDate) return;
 
     const stationId = selectedStation.id;
-    const windowSize = 24; // or make this dynamic if needed
+    const windowSize = 24;
+    const datetime = encodeURIComponent(selectedDate.toISOString());
 
     try {
       const res = await fetch(
-        `https://smartcharge-backend-wg0m.onrender.com/api/predict?stationId=${stationId}&windowSize=${windowSize}`
+        `https://smartcharge-backend-wg0m.onrender.com/api/predict?stationId=${stationId}&windowSize=${windowSize}&datetime=${datetime}`
       );
 
       const data = await res.json();
@@ -64,7 +65,6 @@ export default function MapView() {
       setStatusText("❌ Napaka pri napovedi.");
     }
   };
-
 
   return (
     <div style={{ height: "100vh", width: "100%", position: "relative" }}>

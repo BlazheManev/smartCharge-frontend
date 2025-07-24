@@ -43,7 +43,7 @@ export default function MapView() {
     if (!selectedStation || !selectedDate) return;
 
     const stationId = selectedStation.id;
-    const windowSize = 24;
+    const windowSize = 12;
     const datetime = encodeURIComponent(selectedDate.toISOString());
 
     try {

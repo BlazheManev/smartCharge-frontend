@@ -43,18 +43,19 @@ export default function MapView() {
     if (!selectedStation || !selectedDate) return;
 
     const stationId = selectedStation.id;
-    const windowSize = 12;
-    const datetime = encodeURIComponent(selectedDate.toISOString());
+    const windowSize = 1;
+
+    const startTime = encodeURIComponent(selectedDate.toISOString());
 
     try {
       const res = await fetch(
-        `https://smartcharge-backend-wg0m.onrender.com/api/predict?stationId=${stationId}&windowSize=${windowSize}&datetime=${datetime}`
+        `https://smart-charge-predict.onrender.com/predict-future?station_id=${stationId}&start_time=${startTime}&steps=${windowSize}`
       );
 
       const data = await res.json();
 
-      if (res.ok && data.input) {
-        setConfidence(data.input);
+      if (res.ok && data.predictions) {
+        setConfidence(JSON.stringify(data.predictions[0].status, null, 2)); // display predictions
         setStatusText("✅ Napoved uspešna.");
       } else {
         throw new Error(data.error || "Unknown error");
@@ -65,6 +66,7 @@ export default function MapView() {
       setStatusText("❌ Napaka pri napovedi.");
     }
   };
+
 
   return (
     <div style={{ height: "100vh", width: "100%", position: "relative" }}>
